@@ -56,7 +56,7 @@
 
 @media (max-width: 992px) {
   .page-title {
-    font-size: 36px;
+    font-size: 32px;
   }
   .info-text {
     font-size: 16px;
@@ -80,7 +80,7 @@
       display: none;
     }
     .menu-btn {
-      display: block;
+      display: flex;
     }
   }
 
@@ -208,6 +208,20 @@
 }
 
 @media (max-width: 767px) {
+  .controls {
+    flex-direction: column;
+    .prev, .next, .pagination li {
+      width: 40px;
+      height: 40px;
+    }
+    .pagination {
+      margin: 0 10px;
+    }
+    .btns {
+      margin-top: 20px;
+    }
+  }
+
   .main {
     .trust {
       &-list {
@@ -259,19 +273,47 @@
         grid-template-columns: repeat(1, 1fr);
         margin: 30px 0;
       }
-      .controls {
-        flex-direction: column;
-        .prev, .next, .pagination li {
-          width: 40px;
-          height: 40px;
+    }
+
+    .blog-page {
+      .sort {
+        margin-top: 10px;
+      }
+      .blog-box {
+        margin: 30px 0;
+      }
+    }
+
+    .incoterms {
+      .container {
+        padding: 0;
+      }
+      &-img {
+        margin: 24px 0 32px;
+      }
+      &-box {
+        padding: 20px 20px;
+        font-size: 16px;
+        line-height: 24px;
+        .info-text {
+          font-size: 16px;
+          line-height: 24px;
         }
-        .pagination {
-          margin: 0 10px;
+        .info-title {
+          font-size: 20px;
+          line-height: 20px;
+          margin-top: 24px;
         }
-        .btns {
-          margin-top: 20px;
+        .info-list {
+          margin: 10px 0 20px;
         }
       }
+    }
+  }
+
+  .popUp {
+    &-content {
+      width: 96%;
     }
   }
 }
