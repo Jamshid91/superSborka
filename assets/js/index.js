@@ -40,34 +40,33 @@ $(".sort-list li").click(function(){
   $('.sort-head .active').text(this.innerHTML)
   $(".sort-list li").removeClass('active')
   $(this).addClass('active')
-  // $('.education-title').removeClass('show');
+});
+
+ $(document).ready(function() {
+  $('.tab-list').hide();
+  $('.tab-list:first-child').show();
+  $('.tab-btn').click(function() {
+    let pageInfo = $(this).attr('data-tab');
+    $('.tab-list').hide();
+    $('.' + pageInfo).show();
+  })
 });
 
 
-// const menuBtn = document.querySelector('.menu-btn'),
-//       menu = document.querySelector('.menu');
+$(".mob-select").click(function(){
+  // $('.sort-head .active').text(this.innerHTML)
+  $(".tab-btns").toggleClass('show')
+  // $(this).addClass('active')
+});
 
-      
 
-// $(".menu-btn").click(function(){
-//   $(this).toggleClass('clickedMenu');
-//   $('.menu').toggleClass('d-none');
-//   $('body').toggleClass('bodyStopScroll');
-// });
+$(".tab-btn span").click(function(){
+  $('.mob-select .active').text(this.innerHTML)
+  $(".tab-btns").removeClass('show')
+});
 
-// $(".menu-nav li").click(function(){
-//   $('.menu-btn').removeClass('clickedMenu');
-//   $('.menu').addClass('d-none');
-//   $('body').removeClass('bodyStopScroll');
-// });
 
-// $(".cookie-btn").click(function(){
-//   $(".cookie").addClass('hideCookie');
-// });
 
-// $("img.drawing").click(function(){
-//   $(this).parent().toggleClass('zoomDrawing');
-// });
 
 const submitBtn = document.querySelectorAll('.submit-btn');
 

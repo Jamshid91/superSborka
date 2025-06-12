@@ -51,6 +51,10 @@
         margin-top: 10px;
       }
     }
+    .details-box {
+      grid-gap: 10px;
+    }
+    
   }
 }
 
@@ -146,7 +150,32 @@
       padding: 20px;
     }
   }
+
+  .doc {
+    .mob-select {
+      display: flex;
+    }
+    .doc-tabs {
+      flex-direction: column;
+      margin: 0;
+      .tab-box {
+        margin-top: 20px;
+      }
+      .tab-btns {
+        width: 100%;
+        margin: 10px 0 0 0;
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    }
   }
+  
+  .details-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
   .footer {
     margin-top: 80px;
@@ -309,6 +338,10 @@
         }
       }
     }
+
+    .details-box {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .popUp {
@@ -355,6 +388,23 @@
      .submit-btn {
       width: 100%;
      }
+    }
+  }
+
+  .doc-tabs .tab-box .doc-item {
+    flex-direction: column;
+    .doc-info {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  .details {
+    margin-top: 50px;
+    &-box {
+      margin-top: 30px;
+    }
+    .title-text {
+      text-align: center;
     }
   }
  }
