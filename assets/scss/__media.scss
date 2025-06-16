@@ -256,6 +256,13 @@
       &-list {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .swiper-slide {
+        width: 162px;
+      }
+      &-logo {
+          height: 147px;
+      }
     }
 
     .blog {
@@ -411,6 +418,23 @@
 
  .footer {
   margin-top: 50px;
+  &-bottom {
+    .fenix {
+      margin: 20px 0 0;
+    }
+    .or-x {
+      margin: 5px 0;
+    }
+    .privacy-policy {
+      margin-top: 10px;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .center {
+      flex-direction: column;
+    }
+  }
  }
 }
 

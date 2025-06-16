@@ -24,6 +24,23 @@ const recommendation = new Swiper(".swiper-recommendation", {
 }
 });
 
+const trust = new Swiper(".swiper-trust", {
+	slidesPerView: "auto",
+	spaceBetween: 20,
+	speed: 4000,
+  direction: "horizontal",
+  loop: true,
+  freeMode: true,
+  zoom: true,
+  keyboard: true,
+  pagination: false,
+  navigation: false,
+
+  autoplay: {
+    delay: 0
+  },
+});
+
 $(".userPhone").inputmask({"mask": "+7(999) 999-99-99"});
 
  $(".menu-nav .nav-item").click(function(){
