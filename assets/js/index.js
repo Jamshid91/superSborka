@@ -33,12 +33,65 @@ const trust = new Swiper(".swiper-trust", {
   freeMode: true,
   zoom: true,
   keyboard: true,
-  pagination: false,
-  navigation: false,
 
   autoplay: {
     delay: 0
   },
+});
+
+const sale = new Swiper(".swiper-sale", {
+	slidesPerView: "auto",
+	loop: true,
+  spaceBetween: 24,
+	speed: 4000,
+  direction: "horizontal",
+  loop: true,
+  freeMode: true,
+  zoom: true,
+  keyboard: true,
+
+  autoplay: {
+    delay: 0
+  },
+});
+
+const team = new Swiper(".swiper-team", {
+	slidesPerView: "auto",
+  loop: true,
+  centeredSlides: true,
+  roundLengths: true,
+  navigation: {
+    nextEl: '.team-next',
+    prevEl: '.team-prev',
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 10,
+    },
+    992: {
+      spaceBetween: 28,
+    },
+}
+});
+
+const reviews = new Swiper(".swiper-reviews", {
+  loop: true,
+  navigation: {
+    nextEl: '.review-next',
+    prevEl: '.review-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      centeredSlides: false,
+    },
+}
 });
 
 $(".userPhone").inputmask({"mask": "+7(999) 999-99-99"});
@@ -157,6 +210,40 @@ function setSuccess(input) {
   function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   }
+
+
+  $(".step").click(function(){
+    $('.step').removeClass('active');
+    $(this).addClass('active');
+    if ($('.step:nth-child(1)').hasClass("active")) {
+      $('.steps-box').removeClass('twoBox threeBox fourBox fiveBox sixBox sevenBox');
+      $(this).parent().addClass('oneBox');
+    } 
+    else if ($('.step:nth-child(2)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox threeBox fourBox fiveBox sixBox sevenBox');
+      $(this).parent().addClass('twoBox');
+    }
+    else if ($('.step:nth-child(3)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox twoBox fourBox fiveBox sixBox sevenBox');
+      $(this).parent().addClass('threeBox');
+    }
+    else if ($('.step:nth-child(4)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox twoBox threeBox fiveBox sixBox sevenBox');
+      $(this).parent().addClass('fourBox');
+    }
+    else if ($('.step:nth-child(5)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox sixBox sevenBox');
+      $(this).parent().addClass('fiveBox');
+    }
+    else if ($('.step:nth-child(6)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sevenBox');
+      $(this).parent().addClass('sixBox');
+    }
+    else if ($('.step:nth-child(7)').hasClass("active")) {
+      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox');
+      $(this).parent().addClass('sevenBox');
+    }
+  });
 
 
 //   $(".order-btn").click(function(){
