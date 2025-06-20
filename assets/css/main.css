@@ -974,6 +974,9 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 24px;
   margin: 44px 0 84px;
 }
+.main .incoterms .page-title {
+  margin-bottom: 60px;
+}
 .main .incoterms-box {
   padding: 36px 35px;
   border-radius: 20px;
@@ -986,23 +989,123 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 20px;
   line-height: 36px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
-.main .incoterms-box .info-title {
-  font-size: 24px;
+.main .incoterms-box .info-text:last-child {
+  margin-bottom: 0;
+}
+.main .incoterms-box .title-text {
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+.main .incoterms-box .block-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.main .incoterms-box .group {
+  padding-left: 35px;
+  margin-top: 20px;
+}
+.main .incoterms-box .group .block-title {
+  margin-left: -35px;
+}
+.main .incoterms-box .group-list {
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 24px;
+  border: 1px solid #C0C0C0;
+  font-size: 20px;
+  color: rgba(49, 49, 50, 0.8);
+}
+.main .incoterms-box .info-block {
+  margin-top: 20px;
+  border: 1px solid #C0C0C0;
+  border-radius: 8px;
+  width: 97%;
+  margin-left: auto;
+}
+.main .incoterms-box .info-block .info-list {
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 22px;
+}
+.main .incoterms-box .info-block .info-list li {
+  margin-bottom: 10px;
+}
+.main .incoterms-box .info-block .info-list .info-title {
+  font-weight: 700;
+  font-size: 23px;
+}
+.main .incoterms-box .info-block .info-list .info-subtitle {
+  font-weight: 700;
+  margin: 15px 0;
+}
+.main .incoterms-box .info-block .info-list .responsibilities::before {
+  content: "•";
+  margin-right: 8px;
+}
+.main .incoterms-box .check-item {
+  margin-top: 35px;
+}
+.main .incoterms-box .check-item .check-list li {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(49, 49, 50, 0.8);
+  margin-bottom: 12px;
+}
+.main .incoterms-box .check-item .check-list li:last-child {
+  margin-bottom: 0;
+}
+.main .incoterms-box .note {
+  margin-top: 35px;
+}
+.main .incoterms-box .note-list {
+  width: 100%;
+  border: 1px solid #313132;
+  background: #fff7d1;
+  padding: 16px;
+  padding-left: 45px;
+  border-radius: 12px;
+  font-size: 16px;
   line-height: 24px;
-  font-weight: 600;
+  color: rgba(49, 49, 50, 0.8);
+}
+.main .incoterms-box .note-list h4 {
+  margin-left: -20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgba(49, 49, 50, 0.8);
+}
+.main .incoterms-box .note-list li {
+  list-style-type: decimal;
+}
+.main .incoterms-box .note-list p {
+  display: inline-block;
+  border-bottom: 1px solid rgba(49, 49, 50, 0.8);
+  margin-left: -20px;
+}
+.main .incoterms-box .text-block {
   margin-top: 30px;
 }
-.main .incoterms-box .info-list {
-  margin: 20px 0 30px;
+.main .incoterms-box .info-bottom {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 22px;
 }
-.main .incoterms-box .info-list li {
-  display: flex;
-  align-items: start;
+.main .incoterms-box .info-bottom li {
+  margin-top: 15px;
 }
-.main .incoterms-box .info-list li::before {
-  content: "•";
-  margin-right: 6px;
+.main .incoterms-box .info-bottom .info-title {
+  font-weight: 700;
+  font-size: 23px;
 }
 .main .doc .mob-select {
   display: flex;
@@ -1592,13 +1695,13 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 12px;
 }
 .main .service-product .showBtn::before {
-  content: "Раскрывать ";
+  content: "Подробнее";
   font-size: 18px;
   font-weight: 600;
   margin-right: 12px;
 }
 .main .service-product .clickedBtn::before {
-  content: "Скрывать ";
+  content: "Скрыть";
 }
 .main .service-product .clickedBtn img {
   transform: rotate(180deg);
@@ -3287,22 +3390,31 @@ h1, h2, h3, h4, h5, h6, p {
   .main .incoterms-img {
     margin: 24px 0 32px;
   }
+  .main .incoterms .page-title {
+    margin-bottom: 30px;
+  }
   .main .incoterms-box {
-    padding: 20px 20px;
-    font-size: 16px;
+    padding: 20px;
+  }
+  .main .incoterms-box .block-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .main .incoterms-box .group {
+    padding-left: 0;
+  }
+  .main .incoterms-box .group .block-title {
+    margin-left: 0;
+  }
+  .main .incoterms-box .group-list {
+    font-size: 18px;
     line-height: 24px;
   }
-  .main .incoterms-box .info-text {
-    font-size: 16px;
-    line-height: 24px;
+  .main .incoterms-box .info-block {
+    width: 100%;
   }
-  .main .incoterms-box .info-title {
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: 24px;
-  }
-  .main .incoterms-box .info-list {
-    margin: 10px 0 20px;
+  .main .incoterms-box .info-block .info-list {
+    padding: 0 10px;
   }
   .main .details-box {
     grid-template-columns: repeat(1, 1fr);

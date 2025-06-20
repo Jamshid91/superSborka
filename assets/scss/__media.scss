@@ -803,21 +803,30 @@
       &-img {
         margin: 24px 0 32px;
       }
+      .page-title {
+        margin-bottom: 30px;
+      }
       &-box {
-        padding: 20px 20px;
-        font-size: 16px;
-        line-height: 24px;
-        .info-text {
-          font-size: 16px;
+        padding: 20px;
+        .block-title {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        .group {
+          padding-left: 0;
+          .block-title {
+            margin-left: 0;
+          }
+        }
+        .group-list {
+          font-size: 18px;
           line-height: 24px;
         }
-        .info-title {
-          font-size: 20px;
-          line-height: 20px;
-          margin-top: 24px;
-        }
-        .info-list {
-          margin: 10px 0 20px;
+        .info-block {
+          width: 100%;
+          .info-list {
+            padding: 0 10px;
+          }
         }
       }
     }
