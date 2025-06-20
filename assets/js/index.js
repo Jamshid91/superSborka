@@ -2,6 +2,12 @@ const recommendation = new Swiper(".swiper-recommendation", {
 	slidesPerView: 4,
 	spaceBetween: 30,
 	loop: true,
+  allowTouchMove: true, 
+  simulateTouch: false,
+   slideToClickedSlide: false, 
+  touchReleaseOnEdges: false, 
+  a11y: false,
+  watchSlidesProgress: true,
   navigation: {
     nextEl: '.recommendation-next',
     prevEl: '.recommendation-prev',
@@ -212,37 +218,103 @@ function setSuccess(input) {
   }
 
 
-  $(".step").click(function(){
-    $('.step').removeClass('active');
+  $(".steps_delivery .step").click(function(){
+    $('.steps_delivery .step').removeClass('active');
     $(this).addClass('active');
-    if ($('.step:nth-child(1)').hasClass("active")) {
-      $('.steps-box').removeClass('twoBox threeBox fourBox fiveBox sixBox sevenBox');
+    if ($('.steps_delivery .step:nth-child(1)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('twoBox threeBox fourBox fiveBox sixBox sevenBox');
       $(this).parent().addClass('oneBox');
     } 
-    else if ($('.step:nth-child(2)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox threeBox fourBox fiveBox sixBox sevenBox');
+    else if ($('.steps_delivery .step:nth-child(2)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox threeBox fourBox fiveBox sixBox sevenBox');
       $(this).parent().addClass('twoBox');
     }
-    else if ($('.step:nth-child(3)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox twoBox fourBox fiveBox sixBox sevenBox');
+    else if ($('.steps_delivery .step:nth-child(3)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox twoBox fourBox fiveBox sixBox sevenBox');
       $(this).parent().addClass('threeBox');
     }
-    else if ($('.step:nth-child(4)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox twoBox threeBox fiveBox sixBox sevenBox');
+    else if ($('.steps_delivery .step:nth-child(4)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox twoBox threeBox fiveBox sixBox sevenBox');
       $(this).parent().addClass('fourBox');
     }
-    else if ($('.step:nth-child(5)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox sixBox sevenBox');
+    else if ($('.steps_delivery .step:nth-child(5)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox twoBox threeBox fourBox sixBox sevenBox');
       $(this).parent().addClass('fiveBox');
     }
-    else if ($('.step:nth-child(6)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sevenBox');
+    else if ($('.steps_delivery .step:nth-child(6)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sevenBox');
       $(this).parent().addClass('sixBox');
     }
-    else if ($('.step:nth-child(7)').hasClass("active")) {
-      $('.steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox');
+    else if ($('.steps_delivery .step:nth-child(7)').hasClass("active")) {
+      $('.steps_delivery .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox');
       $(this).parent().addClass('sevenBox');
     }
+  });
+
+
+  $(".steps_ved .step").click(function(){
+    $('.steps_ved .step').removeClass('active');
+    $(this).addClass('active');
+    if ($('.steps_ved .step:nth-child(1)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('twoBox threeBox fourBox fiveBox sixBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('oneBox');
+    } 
+    else if ($('.steps_ved .step:nth-child(2)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox threeBox fourBox fiveBox sixBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('twoBox');
+    }
+    else if ($('.steps_ved .step:nth-child(3)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox fourBox fiveBox sixBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('threeBox');
+    }
+    else if ($('.steps_ved .step:nth-child(4)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fiveBox sixBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('fourBox');
+    }
+    else if ($('.steps_ved .step:nth-child(5)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fourBox sixBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('fiveBox');
+    }
+    else if ($('.steps_ved .step:nth-child(6)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox seven_box eight_box  nine_box');
+      $(this).parent().addClass('sixBox');
+    }
+    else if ($('.steps_ved .step:nth-child(7)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox eight_box  nine_box');
+      $(this).parent().addClass('seven_box');
+    }
+    else if ($('.steps_ved .step:nth-child(8)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox seven_box  nine_box');
+      $(this).parent().addClass('eight_box');
+    }
+    else if ($('.steps_ved .step:nth-child(9)').hasClass("active")) {
+      $('.steps_ved .steps-box').removeClass('oneBox twoBox threeBox fourBox fiveBox sixBox seven_box  eight_box');
+      $(this).parent().addClass('nine_box');
+    }
+  });
+
+
+  $(".faq-head").click(function(){
+    $(this).parent().toggleClass('showFaq')
+  });
+
+  let count = 0;
+  $(".showBtn").click(function(){
+    if(count == 0) {
+      $(this).prev().addClass('showInfo')
+      $(this).addClass('clickedBtn')
+      return count = 1;
+    } else {
+      $(this).prev().removeClass('showInfo')
+      $(this).removeClass('clickedBtn')
+      return count = 0;
+    }
+  });
+
+
+  $(".recommendation img").click(function(){
+    $(".popUp-zoom").removeClass('d-none')
+    $(".popUp-zoom .zoom-img").attr('src', $(this).attr('src'))
   });
 
 
