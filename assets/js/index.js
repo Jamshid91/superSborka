@@ -65,7 +65,7 @@ const team = new Swiper(".swiper-team", {
 	slidesPerView: "auto",
   loop: true,
   centeredSlides: true,
-  roundLengths: true,
+  // roundLengths: true,
   navigation: {
     nextEl: '.team-next',
     prevEl: '.team-prev',

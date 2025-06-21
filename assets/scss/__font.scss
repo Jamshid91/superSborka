@@ -54,3 +54,17 @@
     font-weight: 400;
     font-display: fallback;
 }
+@font-face {
+    font-family: 'Raleway';
+    src: url(../font/Raleway-Medium.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url(../font/Raleway-SemiBold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: fallback;
+}
