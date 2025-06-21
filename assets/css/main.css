@@ -2962,9 +2962,8 @@ h1, h2, h3, h4, h5, h6, p {
   .main .service-product-box .box {
     margin-top: 24px;
     width: 100%;
-  }
-  .main .service-product-box .box .info {
-    max-height: 490px;
+    position: relative;
+    overflow: hidden;
   }
   .main .service-product-box .box-head {
     font-size: 18px;
@@ -3002,10 +3001,9 @@ h1, h2, h3, h4, h5, h6, p {
   .main .service-product-box .box:last-child .item {
     padding: 0;
   }
-  .main .service-product .showInfo {
-    max-height: 100000px !important;
-  }
   .main .service-product .showBtn {
+    position: relative;
+    z-index: 5;
     display: flex;
     width: 105%;
     transform: translateY(15px) translateX(-2.5%);

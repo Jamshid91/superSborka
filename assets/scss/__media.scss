@@ -223,9 +223,8 @@
       .box {
         margin-top: 24px;
         width: 100%;
-        .info {
-          max-height: 490px;
-        }
+        position: relative;
+        overflow: hidden;
         &-head {
           font-size: 18px;
         }
@@ -264,11 +263,9 @@
         }
       }
     }
-    
-    .showInfo {
-      max-height: 100000px !important;
-    }
     .showBtn {
+      position: relative;
+      z-index: 5;
       display: flex;
       width: 105%;
       transform: translateY(15px) translateX(-2.5%);
