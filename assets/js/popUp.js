@@ -13,6 +13,10 @@ popUp_closeBtns.forEach(close => {
     })
 });
 
+$(".popUpClose").click(function(){
+    $(this).parent().parent().addClass('d-none');
+});
+
 
 window.addEventListener('click', (e) => {
     popUps.forEach(popUp => {

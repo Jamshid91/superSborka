@@ -67,7 +67,7 @@ body {
   }
   
   .container {
-    max-width: 1380px;
+    max-width: 1920px;
     padding: 0 20px;
     margin: 0 auto;
   }
@@ -128,6 +128,9 @@ body {
   }
   .pr-0 {
     padding-right: 0 !important;
+  }
+  .relative {
+    position: relative;
   }
 
   .select {
@@ -566,7 +569,7 @@ body {
     font-weight: 500;
     color: #757b8d;
   }
-  .prev, .next, .pagination li {
+  .prev, .next, .pagination li a {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -587,17 +590,19 @@ body {
     margin: 0 16px;
     display: flex;
     li {
-      background: transparent;
+      a {
+        background: transparent;
       border: 2px solid #EAECEE;
+      }
       margin-right: 6px;
       &:last-child {
         margin-right: 0;
       }
-      &:hover {
+      &:hover a{
         background: #EAECEE;
       }
     }
-    .active {
+    .active a{
       background: #FFDD2D;
       color: #313132;
       border: none;
@@ -680,26 +685,6 @@ body {
           border-radius: 13px;
         }
     }
-    // &-list {
-    //   display: grid;
-    //   grid-template-columns: repeat(6, 1fr);
-    //   grid-column-gap: 13px;
-    //   grid-row-gap: 20px;
-    //   li {
-    //     width: 202px;
-    //     height: 187px;
-    //     border-radius: 13px;
-    //     background: #fff;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     img {
-    //       width: 100%;
-    //       object-fit: contain;
-    //       border-radius: 13px;
-    //     }
-    //   }
-    // }
   }
 
   .recommendations {
@@ -710,9 +695,12 @@ body {
     .swiper-recommendation {
       padding: 50px 0;
     }
+    .swiper-slide {
+      width: auto;
+    }
     .recommendation {
       img {
-        width: 100%;
+        width: 320px;
         height: 440px;
         border-radius: 20px;
         border: 3px solid #EAECEE;
@@ -781,9 +769,6 @@ body {
             margin-right: 7px;
           }
         }
-      }
-      &:hover .item-title {
-        text-decoration: underline;
       }
     }
   }
@@ -854,6 +839,9 @@ body {
   .reviews {
     .swiper-reviews {
       margin: 50px 0 30px;
+      .review {
+        min-height: 375px;
+      }
     }
     .swiper-btns {
       .btn-prev, .btn-next {
@@ -1525,9 +1513,6 @@ body {
       position: relative;
       z-index: 3;
     }
-    .container {
-      position: relative;
-    }
     &-img {
       position: absolute;
       top: -100px;
@@ -1609,12 +1594,16 @@ body {
         z-index: 2;
         li {
           margin-bottom: 12px;
+          a:hover {
+            text-decoration: underline;
+          }
         }
         .list {
           margin: 0;
           li {
-            min-width: 46px;
             margin: 8px 4px 0 0 !important;
+            a {
+              min-width: 46px;
             padding: 4px 6px;
             border-radius: 50px;
             background: #757b8d;
@@ -1626,6 +1615,11 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            &:hover {
+              opacity: 0.9;
+              text-decoration: none;
+            }
+            }
           }
         }
       }
@@ -1645,7 +1639,7 @@ body {
 
   .sale {
     padding-bottom: 60px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 5px solid #fff;
     .swiper {
       background: #ffdd2d;
       border: 3px solid #FFFFFF40;
@@ -1711,8 +1705,8 @@ body {
             position: absolute;
             left: 0;
             width: 100%;
-            height: 300px;
-            top: 200px;
+            height: 50px;
+            top: 450px;
             background: #FFF;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
           }
@@ -1725,6 +1719,9 @@ body {
             margin-bottom: 30px;
             li {
               margin-top: 14px;
+              a:hover {
+                text-decoration: underline;
+              }
             }
           }
         }
@@ -2268,6 +2265,7 @@ body {
       border-radius: 20px;
       overflow: hidden;
       position: relative;
+      background: #fff;
       a {
         position: absolute;
         top: 0;
@@ -2427,6 +2425,7 @@ body {
           background: #FFFFFF2E;
           backdrop-filter: blur(20px);
           margin-top: 6px;
+          text-align: center;
         }
       }
     }
@@ -2440,6 +2439,7 @@ body {
     margin-bottom: 50px;
     .title-text {
       text-align: left;
+      font-weight: 800;
     }
     &-box {
       padding: 32px;
@@ -2730,7 +2730,9 @@ body {
       text-transform: uppercase;
       font-family: 'Bounded', sans-serif;
       img {
-        margin-right: 11px;
+        transform: translateY(-6px);
+        width: 35px;
+        margin-right: 5px;
       }
     }
     .or-x {
@@ -2818,7 +2820,8 @@ body {
     align-items: center;
     justify-content: center;
     .popUp-content {
-      width: 550px;
+      width: auto;
+      height: auto;
       margin: 0 !important;
       padding: 0 !important;
       display: flex;
@@ -2826,12 +2829,19 @@ body {
       justify-content: center;
       background: transparent;
     }
-    .popUp-close {
+    .popUpClose {
+      position: absolute;
+      top: 24px;
       right: -30px;
+      background: transparent;
+      cursor: pointer;
+      &:hover svg path {
+        fill: #313132;
+      }
     }
     .zoom-img {
       width: 95%;
-      height: 98%;
+      height: 98vh;
       object-fit: contain;
     }
   }

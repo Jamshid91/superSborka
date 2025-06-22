@@ -1,5 +1,5 @@
 const recommendation = new Swiper(".swiper-recommendation", {
-	slidesPerView: 4,
+	slidesPerView: 'auto',
 	spaceBetween: 30,
 	loop: true,
   allowTouchMove: true, 
@@ -8,6 +8,7 @@ const recommendation = new Swiper(".swiper-recommendation", {
   touchReleaseOnEdges: false, 
   a11y: false,
   watchSlidesProgress: true,
+  centeredSlides: true,
   navigation: {
     nextEl: '.recommendation-next',
     prevEl: '.recommendation-prev',
@@ -15,17 +16,14 @@ const recommendation = new Swiper(".swiper-recommendation", {
   breakpoints: {
     0: {
       spaceBetween: 10,
-      slidesPerView: 'auto',
-      centeredSlides: true,
     },
     992: {
       spaceBetween: 10,
-      slidesPerView: 3,
       centeredSlides: false,
     },
     1199: {
       spaceBetween: 30,
-      slidesPerView: 4,
+      // slidesPerView: 4,
     },
 }
 });
@@ -100,7 +98,7 @@ const reviews = new Swiper(".swiper-reviews", {
 }
 });
 
-$(".userPhone").inputmask({"mask": "+7(999) 999-99-99"});
+$(".userPhone").inputmask({"mask": "+8(999) 999-99-99"});
 
  $(".menu-nav .nav-item").click(function(){
   $(this).toggleClass('showMenuList');

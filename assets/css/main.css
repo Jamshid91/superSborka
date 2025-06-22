@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .container {
-  max-width: 1380px;
+  max-width: 1920px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -215,6 +215,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .pr-0 {
   padding-right: 0 !important;
+}
+
+.relative {
+  position: relative;
 }
 
 .select {
@@ -638,7 +642,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 500;
   color: #757b8d;
 }
-.controls .prev, .controls .next, .controls .pagination li {
+.controls .prev, .controls .next, .controls .pagination li a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -660,17 +664,19 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
 }
 .controls .pagination li {
+  margin-right: 6px;
+}
+.controls .pagination li a {
   background: transparent;
   border: 2px solid #EAECEE;
-  margin-right: 6px;
 }
 .controls .pagination li:last-child {
   margin-right: 0;
 }
-.controls .pagination li:hover {
+.controls .pagination li:hover a {
   background: #EAECEE;
 }
-.controls .pagination .active {
+.controls .pagination .active a {
   background: #FFDD2D;
   color: #313132;
   border: none;
@@ -756,8 +762,11 @@ h1, h2, h3, h4, h5, h6, p {
 .main .recommendations .swiper-recommendation {
   padding: 50px 0;
 }
+.main .recommendations .swiper-slide {
+  width: auto;
+}
 .main .recommendations .recommendation img {
-  width: 100%;
+  width: 320px;
   height: 440px;
   border-radius: 20px;
   border: 3px solid #EAECEE;
@@ -826,9 +835,6 @@ h1, h2, h3, h4, h5, h6, p {
   content: url(../img/svg/clock.svg);
   margin-right: 7px;
 }
-.main .blog-item:hover .item-title {
-  text-decoration: underline;
-}
 .main .contact-info {
   width: 57%;
   padding-top: 35px;
@@ -888,6 +894,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .main .reviews .swiper-reviews {
   margin: 50px 0 30px;
+}
+.main .reviews .swiper-reviews .review {
+  min-height: 375px;
 }
 .main .reviews .swiper-btns .btn-prev, .main .reviews .swiper-btns .btn-next {
   background: #fff;
@@ -1526,9 +1535,6 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   z-index: 3;
 }
-.main .wrapper .container {
-  position: relative;
-}
 .main .wrapper-img {
   position: absolute;
   top: -100px;
@@ -1612,12 +1618,17 @@ h1, h2, h3, h4, h5, h6, p {
 .main .service-item .item-list li {
   margin-bottom: 12px;
 }
+.main .service-item .item-list li a:hover {
+  text-decoration: underline;
+}
 .main .service-item .item-list .list {
   margin: 0;
 }
 .main .service-item .item-list .list li {
-  min-width: 46px;
   margin: 8px 4px 0 0 !important;
+}
+.main .service-item .item-list .list li a {
+  min-width: 46px;
   padding: 4px 6px;
   border-radius: 50px;
   background: #757b8d;
@@ -1630,6 +1641,10 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   justify-content: center;
 }
+.main .service-item .item-list .list li a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
 .main .service-item:first-child .item-list li:nth-child(1) {
   margin: 0;
 }
@@ -1641,7 +1656,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .main .sale {
   padding-bottom: 60px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 5px solid #fff;
 }
 .main .sale .swiper {
   background: #ffdd2d;
@@ -1708,8 +1723,8 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 300px;
-  top: 200px;
+  height: 50px;
+  top: 450px;
   background: #FFF;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 100%);
 }
@@ -1723,6 +1738,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .main .service-product-box .box .item-list li {
   margin-top: 14px;
+}
+.main .service-product-box .box .item-list li a:hover {
+  text-decoration: underline;
 }
 .main .service-product-box .box:last-child {
   width: 29%;
@@ -2201,6 +2219,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+  background: #fff;
 }
 .main .cases-item a {
   position: absolute;
@@ -2358,6 +2377,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: rgba(255, 255, 255, 0.1803921569);
   backdrop-filter: blur(20px);
   margin-top: 6px;
+  text-align: center;
 }
 .main .team .swiper-slide-active .team-item {
   width: 377px;
@@ -2368,6 +2388,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .main .examples .title-text {
   text-align: left;
+  font-weight: 800;
 }
 .main .examples-box {
   padding: 32px;
@@ -2649,7 +2670,9 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "Bounded", sans-serif;
 }
 .footer-bottom .fenix img {
-  margin-right: 11px;
+  transform: translateY(-6px);
+  width: 35px;
+  margin-right: 5px;
 }
 .footer-bottom .or-x {
   font-size: 16px;
@@ -2733,7 +2756,8 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 .popUp-zoom .popUp-content {
-  width: 550px;
+  width: auto;
+  height: auto;
   margin: 0 !important;
   padding: 0 !important;
   display: flex;
@@ -2741,12 +2765,19 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   background: transparent;
 }
-.popUp-zoom .popUp-close {
+.popUp-zoom .popUpClose {
+  position: absolute;
+  top: 24px;
   right: -30px;
+  background: transparent;
+  cursor: pointer;
+}
+.popUp-zoom .popUpClose:hover svg path {
+  fill: #313132;
 }
 .popUp-zoom .zoom-img {
   width: 95%;
-  height: 98%;
+  height: 98vh;
   object-fit: contain;
 }
 
@@ -2784,6 +2815,11 @@ h1, h2, h3, h4, h5, h6, p {
   }
   to {
     transform: scale(1);
+  }
+}
+@media (min-width: 1450px) {
+  .main .service-item {
+    height: 550px;
   }
 }
 @media (max-width: 1250px) {
@@ -3556,6 +3592,11 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .popUp-content {
     width: 96%;
+  }
+  .popUp-zoom .popUpClose {
+    position: absolute;
+    top: 100px;
+    right: 30px;
   }
 }
 @media (max-width: 576px) {
